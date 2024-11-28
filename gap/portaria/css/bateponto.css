@@ -1,0 +1,516 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Define as propriedades a todos os elementos 
+   da página.*/
+* {
+	/* Remove a margem externa de todos os lados 
+	   do elemento.*/
+	margin: 0;
+
+	/* Remove o espaçamento interno de todos os 
+	   lados do elemento. */
+	padding: 0;
+
+	/* O preenchimento e a borda serão incluídos 
+	   na largura e na altura. */
+	box-sizing: border-box;
+
+	/* Define o tipo da fonte.*/
+	font-family: "Ubuntu", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+	--vermelho: hsl(0, 100%, 32%);
+    --white:#fff;
+    --dark:#1e1c2a;
+}
+
+/*===== Scroll =====*/
+::-webkit-scrollbar{
+    width: 4px;
+    background-color: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    width: 6px;
+    border-radius: 30px;
+    background-color: rgba(255, 0, 0, 0.8);
+  
+}
+
+body{
+	background-image: url('../imgs/fundo.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+	z-index: 1;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 180px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+	z-index: 1;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover{
+    color: var(--vermelho);
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.sair{
+    padding: 10px 35px;
+    background: var(--vermelho);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--vermelho);
+}
+
+.main {
+	/* Cor do elemento */
+
+	/*Torna o elemento um flex container, 
+	  transformando todos os seus elementos 
+	  internos (filhos) em flex itens.*/
+	  display: flex;
+
+	  /*Alinha os flex itens de acordo com o eixo 
+		do container. */
+	  align-items: center;
+  
+	  /*Alinha os itens flex no container de 
+		acordo com a direção. */
+	  justify-content: center;
+  
+	  /* Altura mínima do elemento. */
+	  /* Unidades de tamanho da tela vh e vw. */
+	  min-height: 100vh;
+
+	  z-index: -1;
+
+}
+
+section {
+	display: flex;
+
+	background: #fff;
+
+	/*Gerar espaço ao redor do conteúdo do elemento
+	  30px superior e inferior
+	  5px para a esquerda e direita. */
+	padding: 30px 5px;
+
+	/* Arredonda cantos. */
+	border-radius: 10px;
+
+	/* Adiciona sombra nos elementos */
+	box-shadow: 5px 5px 15px;
+
+	/* Tamanho máximo do elemento*/
+	max-width: 70vw;
+}
+
+section h1 {
+	padding: 40px 10px;
+	text-align: center;
+}
+
+fieldset{
+	/* Remove a borda. */
+	border:none;
+}
+
+fieldset:nth-child(2) {
+	/* Vai alinhar os elementos 
+	   um ao lado do outro. */
+	display: flex;
+}
+
+fieldset:nth-child(3) {
+	/* Vai alinhar os elementos 
+	   um ao lado do outro. */
+	display: flex;
+}
+
+fieldset:nth-child(4) {
+	/* Vai alinhar os elementos 
+	   um ao lado do outro. */
+	display: flex;
+}
+
+fieldset:nth-child(5) {
+	display: flex;
+}
+
+.container {
+	/* Tipo de método de posicionamento de um elemento (estático, relativo, fixo, absoluto ou aderente)
+
+	/* Definido como relative, indica que está posicionado em relação à sua posição normal. 
+
+	Outro conteúdo não será ajustado para caber em qualquer lacuna deixada pelo elemento.*/
+
+	/* relative - indica que esta posicionado
+	   em relação à sua posição normal. */
+	position: relative;
+}
+
+.container input {
+
+	margin: 10px 10px;
+
+	/* Define a largura do elemento. */
+	width: calc(100% - 20px);
+
+	/* Defina a altura do elementos. */
+	height: 70px;
+
+	/* Remove a borda. */
+	border: none;
+
+	background-color: #ededed;
+	border-radius: 4px;
+	color: #333;
+
+	/* Tamanho da fonte.*/
+	font-size: 18px;
+
+	/* Aumenta a largura do contorno do texto.*/
+	font-weight: 700;
+
+	/* Gera espaço ao redor do conteúdo do elemento
+	   (superior, direito, inferior e esquerdo) */
+	padding: 14px 10px 0 10px;
+}
+
+input[type=date]::-webkit-datetime-edit{ color: transparent; }
+input[type=date]:valid::-webkit-datetime-edit{ color: #000; }
+input[type=date]:focus::-webkit-datetime-edit{ color: #000; }
+
+input[type=date]{ color: transparent; }
+input[type=date]:valid{ color: #000; }
+input[type=date]:focus{ color: #000; }
+
+input[type=time]::-webkit-time-edit{ color: transparent; }
+input[type=time]:valid::-webkit-time-edit{ color: #000; }
+input[type=time]:focus::-webkit-time-edit{ color: #000; }
+
+input[type=time]{ color: transparent; }
+input[type=time]:valid{ color: #000; }
+input[type=time]:focus{ color: #000; }
+
+.container .data{
+	display: flex;
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+#horario input{
+	padding: 10px 120px;
+}
+
+.container .data{
+	display: flex;
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+.container label {
+	/* Tranforma o texto deixando todas as letras
+	   em maiúsculo. */
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	color: #9d9d9d;
+
+	/* Posiciona qualquer elemento de acordo com o 
+	   elemento pai, deixando de fazer parte do fluxo 
+	   comum do documento.*/
+	position: absolute;
+	
+	/* Defina a altura entre linha. */
+	line-height: 70px;
+
+	/* Posição vertical que necessita que o elemento 
+	   tenha uma posição determinada. */
+	top: 10px;
+
+	/* Distância da borda esquerda.*/
+	left: 20px;
+
+	/* Impede a seleção de texto.*/
+	user-select: none;
+
+	/* Se o elemento deve agir ou não a
+	   eventos do ponteiro. */
+	pointer-events: none;
+
+	/* Altera os valores das propriedades
+	   suavemente em um tempo determinado.*/
+	transition: 0.5s;
+}
+
+/* ~ - Quando ocorrer o foco no input 
+   altere as propriedades do label. */
+.container input:focus ~ label,
+.container input:valid ~ label {
+	left: 20px;
+	top: -10px;
+	color: var(--vermelho);
+}
+
+#check {
+	width: 50%;
+	text-transform: uppercase;
+	font-size: 14px;
+	display: flex;
+}
+
+#check input{
+
+	/* Define a largura do elemento. */
+	width: 25px;
+
+	/* Defina a altura do elementos. */
+	height: 25px;
+
+	/* auto - Centraliza o elemento na horizontal.
+	   0 - Não altera a margem esquerda e direita. */
+	margin: auto 0;
+
+	/* Gera espaço ao redor do conteúdo do elemento
+	   (superior, direito, inferior e esquerdo) */
+	/*padding: 14px 60px 0 10px;*/
+}
+
+#check label {
+
+	margin: auto 10px;
+
+	color: #555;
+	transition: 0.5s
+}
+
+#check input:checked ~ label,
+#check input:valid ~ label {
+	color: var(--vermelho);
+}
+
+.button {
+	/*auto  - Centraliza horizontalmente 
+	  o elemento em seu conteiner.*/ 
+	margin: 40px 0;
+	margin-left: 10px;
+
+	/* Ocupar metade do fieldset descontando a 
+	   margin de 10px*/
+	width: calc(63% - 10px);
+	height: 70px;
+
+	background-color: hsl(0, 100%, 25%);
+	color: #fff;
+	font-size: 20px;
+	border:none;
+	border-radius: 20px;
+
+	/* Muda o ponteiro do mouse.*/
+	cursor: pointer;
+
+	/* Linear - Mesma velocidade do início ao fim. */
+	transition: .3s linear;
+
+}
+
+.button:hover {
+	/* Altera a transparência do elemento. */
+	opacity: 0.85;
+	background-color: hsl(0, 100%, 12%);
+}
+
+form a {
+	/* Remove a decoração padrão do elemento
+	   Na tag a "link" remove o traço inferior. */
+	text-decoration: none;
+
+	font-size: 16px;
+	color: #555;
+	font-weight: 500;
+	padding-top: 20px;
+
+	text-transform: uppercase;
+
+	text-align: center;
+
+	/*Exibe o elemento em bloco. 
+	Ele começa em uma nova linha e ocupa toda a largura.*/
+	display: block;
+}
+
+form a:hover {
+	color: #111;
+}
+
+section img {
+	width: 250px;
+	height: 250px;
+
+	/*auto  - Centraliza horizontalmente 
+	  o elemento em seu conteiner.*/
+	margin: auto 40px;
+}
+
+@media only screen and (max-width: 1080px) {
+	div#parallelogram {
+		height: 690px;
+	}
+
+	section img {
+		display: none;
+	}
+}
+
+/* Fazendo o site ficar responsivo */
+@media (max-width:785px) {
+    .navigation{
+		padding: 1px 20px;
+        margin-top: -10px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+
+    .sair-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .sair-menu.ativo{
+        right: 0;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+	div#parallelogram {
+		display: none;
+	}
+
+	section {
+		min-width: 95vw;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	fieldset:nth-child(2),
+	fieldset:nth-child(4),
+	fieldset:nth-child(5) {
+		flex-direction: column;
+	}
+
+	fieldset:nth-child(4) {
+		padding: 0px;
+	}
+
+	div#check {
+		width: 100%;
+	}
+
+	button {
+		width: 100%;
+		margin-left: 0;
+	}
+}
